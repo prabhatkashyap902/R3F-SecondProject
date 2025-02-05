@@ -29,7 +29,7 @@ const Scene = () => {
       <Perf />
       <directionalLight
         position={[1, 2, 5]}
-        ref={directionLightHelper}
+        // ref={directionLightHelper}
         castShadow
         intensity={1}
       />
@@ -50,15 +50,19 @@ const Scene = () => {
         <boxGeometry args={[5, 5, 5]} />
         <meshStandardMaterial color="hotpink" />
       </mesh> */}
-      <mesh receiveShadow position={[0, -1, 0]} rotation={[Math.PI / 2, 0, 0]}>
+      {/* <mesh receiveShadow position={[0, -1, 0]} rotation={[Math.PI / 2, 0, 0]}>
         <planeGeometry args={[25, 25]} />
         <meshStandardMaterial color="lightblue" side={2} />
-      </mesh>
+      </mesh> */}
       <Suspense fallback={null}>
-        <Hamburger position={[5, 0, 0]} />
+        {/* <Hamburger position={[5, 0, 0]} /> */}
         <Fox scale={0.1} position={[-5, 0, 0]}/>
-
       </Suspense>
+      <Environment background preset="sunset"  ground={{
+          height: 100,
+          radius: 500,
+          scale:50
+        }}/>
       {/* <mesh castShadow position={[5, 0, 0]}>
         <sphereGeometry args={[3, 64, 64]} />
         <meshStandardMaterial color="lightgreen" />
